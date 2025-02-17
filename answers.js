@@ -28,8 +28,26 @@ fetch('https://msu-webdev.github.io/api/start.json')
 
         console.log('Answer to Step 2:', step2Answer);
 
-        const nexturl2 = 'https://msu-webdev.github.io/api/2.json'
+        const nexturl2 = 'https://msu-webdev.github.io/api/15.json'
         return fetch(nexturl2)
 })
 
+    .then(data => {
+        console.log('Step 3 data:',data);
+
+        const nintendoBits = 8;
+        const superNintendoBits = 16;
+        const step3Answer = nintendoBits * superNintendoBits;
+
+        console.log('Answer to Step 3:', step3Answer);
+
+        const nexturl3 = 'https://msu-webdev.github.io/api/128.json';
+        return fetch(nexturl3);
+    })
+
+    .then(response => response.json())
+    .then(finalData => {
+        console.log('Final step data:', finalData);
+    })
+    
  
